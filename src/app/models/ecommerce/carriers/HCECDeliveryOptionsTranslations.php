@@ -18,5 +18,5 @@ class HCECDeliveryOptionsTranslations extends HCUuidModel
      *
      * @var array
      */
-    protected $fillable = ['record_id', 'language_code', 'description', 'label', 'slug', 'seo_title', 'seo_description', 'seo_keywords'];
+    protected $fillable = ['record_id', 'language_code', 'description', 'label', 'seo_title', 'seo_description', 'seo_keywords'];
 }

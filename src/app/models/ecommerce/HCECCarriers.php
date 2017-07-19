@@ -2,9 +2,9 @@
 
 namespace interactivesolutions\honeycombecommercecarriers\app\models\ecommerce;
 
-use interactivesolutions\honeycombcore\models\HCUuidModel;
+use interactivesolutions\honeycombcore\models\HCMultiLanguageModel;
 
-class HCECCarriers extends HCUuidModel
+class HCECCarriers extends HCMultiLanguageModel
 {
     /**
      * The database table used by the model.

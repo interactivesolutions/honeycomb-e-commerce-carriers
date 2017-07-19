@@ -95,6 +95,7 @@ class HCECCarriersController extends HCBaseController
         $data = $this->getInputData();
 
         $record = HCECCarriers::create(array_get($data, 'record'));
+        $record->updateTranslations(array_get($data, 'translations', []));
 
         return $this->apiShow($record->id);
     }
@@ -112,6 +113,7 @@ class HCECCarriersController extends HCBaseController
         $data = $this->getInputData();
 
         $record->update(array_get($data, 'record', []));
+        $record->updateTranslations(array_get($data, 'translations', []));
 
         return $this->apiShow($record->id);
     }
@@ -241,6 +243,8 @@ class HCECCarriersController extends HCBaseController
         array_set($data, 'record.max_package_depth', array_get($_data, 'max_package_depth'));
         array_set($data, 'record.max_package_weight', array_get($_data, 'max_package_weight'));
 
+        array_set($data, 'translations', array_get($_data, 'translations'));
+
         return $data;
     }
 
@@ -252,7 +256,7 @@ class HCECCarriersController extends HCBaseController
      */
     public function apiShow(string $id)
     {
-        $with = [];
+        $with = ['translations'];
 
         $select = HCECCarriers::getFillableFields();
 
