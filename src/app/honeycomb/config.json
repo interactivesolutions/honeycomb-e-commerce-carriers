@@ -1,21 +1,40 @@
 {
-    "general":
-    {
+    "general": {
         "serviceProviderNameSpace": "HCECommerceCarriers"
     },
-    "formData":
-    [
+    "formData": {
+        "e-commerce-carriers": "interactivesolutions\\honeycombecommercecarriers\\app\\forms\\ecommerce\\HCECCarriersForm"
+    },
+    "adminMenu": [
+        {
+            "route": "admin.routes.e.commerce.carriers.index",
+            "translation": "HCECommerceCarriers::e_commerce_carriers.page_title",
+            "icon": "fa-truck",
+            "aclPermission": "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_list",
+            "priority": 10
+        }
     ],
-    "adminMenu":
-    [
-    ],
-    "acl":
-    {
-        "permissions" :
-        [
+    "acl": {
+        "permissions": [
+            {
+                "name": "admin.routes.e.commerce.carriers",
+                "controller": "interactivesolutions\\honeycombecommercecarriers\\app\\http\\controllers\\ecommerce\\HCECCarriersController",
+                "actions": [
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_list",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_create",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_update",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delete",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_force_delete"
+                ]
+            }
         ],
-        "rolesActions" :
-        [
-        ]
+        "rolesActions": {
+            "project-admin": [
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_list",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_create",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_update",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delete"
+            ]
+        }
     }
 }
