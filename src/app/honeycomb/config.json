@@ -3,7 +3,8 @@
         "serviceProviderNameSpace": "HCECommerceCarriers"
     },
     "formData": {
-        "e-commerce-carriers": "interactivesolutions\\honeycombecommercecarriers\\app\\forms\\ecommerce\\HCECCarriersForm"
+        "e-commerce-carriers": "interactivesolutions\\honeycombecommercecarriers\\app\\forms\\ecommerce\\HCECCarriersForm",
+        "e-commerce-carriers-delivery-options": "interactivesolutions\\honeycombecommercecarriers\\app\\forms\\ecommerce\\carriers\\HCECDeliveryOptionsForm"
     },
     "adminMenu": [
         {
@@ -12,6 +13,14 @@
             "icon": "fa-truck",
             "aclPermission": "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_list",
             "priority": 10
+        },
+        {
+            "route": "admin.routes.e.commerce.carriers.delivery.options.index",
+            "translation": "HCECommerceCarriers::e_commerce_carriers_delivery_options.page_title",
+            "icon": "fa-lightbulb-o",
+            "aclPermission": "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_list",
+            "priority": 10,
+            "parent": "admin.routes.e.commerce.carriers.index"
         }
     ],
     "acl": {
@@ -26,6 +35,17 @@
                     "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delete",
                     "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_force_delete"
                 ]
+            },
+            {
+                "name": "admin.routes.e.commerce.carriers.delivery.options",
+                "controller": "interactivesolutions\\honeycombecommercecarriers\\app\\http\\controllers\\ecommerce\\carriers\\HCECDeliveryOptionsController",
+                "actions": [
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_list",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_create",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_update",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_delete",
+                    "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_force_delete"
+                ]
             }
         ],
         "rolesActions": {
@@ -33,7 +53,11 @@
                 "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_list",
                 "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_create",
                 "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_update",
-                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delete"
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delete",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_list",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_create",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_update",
+                "interactivesolutions_honeycomb_e_commerce_carriers_routes_e_commerce_carriers_delivery_options_delete"
             ]
         }
     }

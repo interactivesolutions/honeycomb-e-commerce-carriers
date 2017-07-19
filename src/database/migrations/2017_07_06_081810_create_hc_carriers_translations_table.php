@@ -16,7 +16,8 @@ class CreateHcCarriersTranslationsTable extends Migration {
 		{
 			$table->integer('count', true);
 			$table->string('id', 36)->unique('id_UNIQUE');
-			$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->timestamps();
+			$table->softDeletes();
 			$table->string('record_id', 36);
 			$table->string('language_code', 2)->index('fk_hc_carriers_translations_hc_languages1_idx');
 			$table->text('description', 65535);
