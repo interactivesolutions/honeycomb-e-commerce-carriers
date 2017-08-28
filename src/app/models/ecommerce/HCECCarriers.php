@@ -23,7 +23,7 @@ class HCECCarriers extends HCMultiLanguageModel
 
     /**
      * Delivery options
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function delivery_options()
