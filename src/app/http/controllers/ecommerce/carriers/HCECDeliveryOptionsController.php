@@ -53,7 +53,7 @@ class HCECDeliveryOptionsController extends HCBaseController
     public function getAdminListHeader()
     {
         return [
-            'carrier_id'  => [
+            'carrier.label'  => [
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers_delivery_options.carrier_id'),
             ],
@@ -162,7 +162,7 @@ class HCECDeliveryOptionsController extends HCBaseController
      */
     protected function createQuery(array $select = null)
     {
-        $with = [];
+        $with = ['carrier'];
 
         if( $select == null )
             $select = HCECDeliveryOptions::getFillableFields();

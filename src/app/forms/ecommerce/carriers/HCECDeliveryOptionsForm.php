@@ -34,10 +34,11 @@ class HCECDeliveryOptionsForm
                 [
                     "type"            => "dropDownList",
                     "fieldID"         => "carrier",
+                    "tabID"           => trans('HCTranslations::core.general'),
                     "label"           => trans("HCECommerceCarriers::e_commerce_carriers_delivery_options.carrier_id"),
                     "required"        => 1,
                     "requiredVisible" => 1,
-                    "options"         => HCECCarriers::select('id', 'label')->get(),
+                    "options"         => HCECCarriers::select('id', 'label')->has('delivery_options', '=', 0)->get(),
                     "search"          => [
                         "showNodes"              => ['label'],
                         "maximumSelectionLength" => 1,
@@ -46,6 +47,7 @@ class HCECDeliveryOptionsForm
                 [
                     "type"            => "radioList",
                     "fieldID"         => "type",
+                    "tabID"           => trans('HCTranslations::core.general'),
                     "label"           => trans("HCECommerceCarriers::e_commerce_carriers_delivery_options.type"),
                     "required"        => 1,
                     "requiredVisible" => 1,
@@ -54,6 +56,7 @@ class HCECDeliveryOptionsForm
                 [
                     "type"            => "singleLine",
                     "fieldID"         => "fixed_price",
+                    "tabID"           => trans('HCTranslations::core.general'),
                     "label"           => trans("HCECommerceCarriers::e_commerce_carriers_delivery_options.fixed_price"),
                     "required"        => 1,
                     "requiredVisible" => 1,
@@ -61,41 +64,41 @@ class HCECDeliveryOptionsForm
                 [
                     "type"            => "singleLine",
                     "fieldID"         => "translations.label",
-                    "tabID"           => trans ('HCTranslations::core.translations'),
-                    "label"           => trans ("HCECommerceGoods::e_commerce_categories.label"),
+                    "tabID"           => trans('HCTranslations::core.translations'),
+                    "label"           => trans("HCECommerceGoods::e_commerce_categories.label"),
                     "required"        => 1,
                     "requiredVisible" => 1,
                     "multiLanguage"   => 1,
-                ],[
+                ], [
                     "type"            => "textArea",
                     "fieldID"         => "translations.description",
-                    "tabID"           => trans ('HCTranslations::core.translations'),
-                    "label"           => trans ("HCECommerceGoods::e_commerce_categories.description"),
+                    "tabID"           => trans('HCTranslations::core.translations'),
+                    "label"           => trans("HCECommerceGoods::e_commerce_categories.description"),
                     "required"        => 0,
                     "requiredVisible" => 0,
                     "multiLanguage"   => 1,
-                    "rows"            => 5
-                ],  [
+                    "rows"            => 5,
+                ], [
                     "type"            => "singleLine",
                     "fieldID"         => "translations.seo_title",
-                    "tabID"           => trans ('HCTranslations::core.seo'),
-                    "label"           => trans ("HCECommerceGoods::e_commerce_categories.seo_title"),
+                    "tabID"           => trans('HCTranslations::core.seo'),
+                    "label"           => trans("HCECommerceGoods::e_commerce_categories.seo_title"),
                     "required"        => 0,
                     "requiredVisible" => 0,
                     "multiLanguage"   => 1,
                 ], [
                     "type"            => "singleLine",
                     "fieldID"         => "translations.seo_description",
-                    "tabID"           => trans ('HCTranslations::core.seo'),
-                    "label"           => trans ("HCECommerceGoods::e_commerce_categories.seo_description"),
+                    "tabID"           => trans('HCTranslations::core.seo'),
+                    "label"           => trans("HCECommerceGoods::e_commerce_categories.seo_description"),
                     "required"        => 0,
                     "requiredVisible" => 0,
                     "multiLanguage"   => 1,
                 ], [
                     "type"            => "singleLine",
                     "fieldID"         => "translations.seo_keywords",
-                    "tabID"           => trans ('HCTranslations::core.seo'),
-                    "label"           => trans ("HCECommerceGoods::e_commerce_categories.seo_keywords"),
+                    "tabID"           => trans('HCTranslations::core.seo'),
+                    "label"           => trans("HCECommerceGoods::e_commerce_categories.seo_keywords"),
                     "required"        => 0,
                     "requiredVisible" => 0,
                     "multiLanguage"   => 1,
