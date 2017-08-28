@@ -224,7 +224,7 @@ class HCECDeliveryOptionsController extends HCBaseController
         array_set($data, 'record.free_from_price', array_get($_data, 'free_from_price'));
         array_set($data, 'translations', array_get($_data, 'translations'));
 
-        return $data;
+        return makeEmptyNullable($data);
     }
 
     /**

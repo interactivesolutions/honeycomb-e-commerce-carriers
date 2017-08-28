@@ -88,8 +88,8 @@ class HCECDeliveryOptionsForm
                     "fieldID"         => "translations.description",
                     "tabID"           => trans('HCTranslations::core.translations'),
                     "label"           => trans("HCECommerceGoods::e_commerce_categories.description"),
-                    "required"        => 0,
-                    "requiredVisible" => 0,
+                    "required"        => 1,
+                    "requiredVisible" => 1,
                     "multiLanguage"   => 1,
                     "rows"            => 5,
                 ], [
