@@ -245,7 +245,7 @@ class HCECCarriersController extends HCBaseController
 
         array_set($data, 'translations', array_get($_data, 'translations'));
 
-        return $data;
+        return makeEmptyNullable($data);
     }
 
     /**
