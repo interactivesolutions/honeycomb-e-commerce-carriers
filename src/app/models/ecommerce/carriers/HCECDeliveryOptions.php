@@ -19,7 +19,7 @@ class HCECDeliveryOptions extends HCMultiLanguageModel
      *
      * @var array
      */
-    protected $fillable = ['id', 'carrier_id', 'type', 'fixed_price'];
+    protected $fillable = ['id', 'carrier_id', 'type', 'fixed_price', 'free_from_price'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

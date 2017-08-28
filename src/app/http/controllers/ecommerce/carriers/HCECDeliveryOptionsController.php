@@ -65,6 +65,10 @@ class HCECDeliveryOptionsController extends HCBaseController
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers_delivery_options.fixed_price'),
             ],
+            'free_from_price' => [
+                "type"  => "text",
+                "label" => trans('HCECommerceCarriers::e_commerce_carriers_delivery_options.free_from_price'),
+            ],
 
         ];
     }
@@ -217,6 +221,7 @@ class HCECDeliveryOptionsController extends HCBaseController
         array_set($data, 'record.carrier_id', array_get($_data, 'carrier'));
         array_set($data, 'record.type', array_get($_data, 'type'));
         array_set($data, 'record.fixed_price', array_get($_data, 'fixed_price'));
+        array_set($data, 'record.free_from_price', array_get($_data, 'free_from_price'));
         array_set($data, 'translations', array_get($_data, 'translations'));
 
         return $data;

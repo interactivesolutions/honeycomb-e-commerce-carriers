@@ -63,6 +63,20 @@ class HCECDeliveryOptionsForm
                 ],
                 [
                     "type"            => "singleLine",
+                    "fieldID"         => "free_from_price",
+                    "tabID"           => trans('HCTranslations::core.general'),
+                    "label"           => trans("HCECommerceCarriers::e_commerce_carriers_delivery_options.free_from_price"),
+                    "required"        => 0,
+                    "requiredVisible" => 0,
+                    "dependencies"    => [
+                        [
+                            'field_id'    => 'type',
+                            'field_value' => 'delivery',
+                        ],
+                    ],
+                ],
+                [
+                    "type"            => "singleLine",
                     "fieldID"         => "translations.label",
                     "tabID"           => trans('HCTranslations::core.translations'),
                     "label"           => trans("HCECommerceGoods::e_commerce_categories.label"),
