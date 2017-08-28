@@ -2,7 +2,7 @@
 
 namespace interactivesolutions\honeycombecommercecarriers\app\forms\ecommerce\carriers;
 
-use interactivesolutions\honeycombecommercegoods\app\models\ecommerce\goods\carriers\HCECCarriersDeliveryOptions;
+use interactivesolutions\honeycombecommercecarriers\app\models\ecommerce\carriers\HCECDeliveryOptions;
 
 class HCECDeliveryCollectAddressesForm
 {
@@ -36,7 +36,7 @@ class HCECDeliveryCollectAddressesForm
                     "label"           => trans("HCECommerceCarriers::e_commerce_carriers_collect_addresses.delivery_option_id"),
                     "required"        => 1,
                     "requiredVisible" => 1,
-                    "options"         => HCECCarriersDeliveryOptions::with('translations')->where('type', 'self collected')->get(),
+                    "options"         => HCECDeliveryOptions::with('translations')->where('type', 'self collected')->get(),
                     "search"          => [
                         "showNodes"              => ['translations.{lang}.label'],
                         "maximumSelectionLength" => 1,
