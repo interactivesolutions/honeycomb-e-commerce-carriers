@@ -28,4 +28,14 @@ class HCECDeliveryOptions extends HCMultiLanguageModel
     {
         return $this->belongsTo(HCECCarriers::class, 'carrier_id', 'id');
     }
+
+    /**
+     * Relation to table
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function collect_addresses()
+    {
+        return $this->hasMany(HCECDeliveryCollectAddresses::class, 'delivery_option_id', 'id');
+    }
 }
