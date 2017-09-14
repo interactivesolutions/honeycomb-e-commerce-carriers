@@ -81,6 +81,10 @@ class HCECCarriersController extends HCBaseController
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers.max_package_weight'),
             ],
+            'track_url' => [
+                "type"  => "text",
+                "label" => trans('HCECommerceCarriers::e_commerce_carriers.track_url'),
+            ],
 
         ];
     }
@@ -238,6 +242,7 @@ class HCECCarriersController extends HCBaseController
         array_set($data, 'record.label', array_get($_data, 'label'));
         array_set($data, 'record.slug', array_get($_data, 'slug'));
         array_set($data, 'record.slug', generateHCSlug('carriers', array_get($_data, 'label')));
+        array_set($data, 'record.track_url', array_get($_data, 'track_url'));
         array_set($data, 'record.max_package_width', array_get($_data, 'max_package_width'));
         array_set($data, 'record.max_package_height', array_get($_data, 'max_package_height'));
         array_set($data, 'record.max_package_depth', array_get($_data, 'max_package_depth'));

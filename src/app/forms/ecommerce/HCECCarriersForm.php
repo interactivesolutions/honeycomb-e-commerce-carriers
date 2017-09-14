@@ -46,7 +46,16 @@ class HCECCarriersForm
                     "label"           => trans("HCECommerceCarriers::e_commerce_carriers.label"),
                     "required"        => 1,
                     "requiredVisible" => 1,
-                ], [
+                ],
+                [
+                    "type"            => "singleLine",
+                    "fieldID"         => "track_url",
+                    "tabID"           => trans('HCTranslations::core.general'),
+                    "label"           => trans("HCECommerceCarriers::e_commerce_carriers.track_url"),
+                    "required"        => 0,
+                    "requiredVisible" => 0,
+                ],
+                [
                     "type"            => "singleLine",
                     "fieldID"         => "max_package_width",
                     "tabID"           => trans('HCTranslations::core.general'),

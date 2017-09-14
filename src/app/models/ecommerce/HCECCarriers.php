@@ -20,7 +20,7 @@ class HCECCarriers extends HCMultiLanguageModel
      *
      * @var array
      */
-    protected $fillable = ['id', 'resource_id', 'label', 'slug', 'max_package_width', 'max_package_height', 'max_package_depth', 'max_package_weight'];
+    protected $fillable = ['id', 'resource_id', 'label', 'slug', 'track_url', 'max_package_width', 'max_package_height', 'max_package_depth', 'max_package_weight'];
 
     /**
      * Delivery options
