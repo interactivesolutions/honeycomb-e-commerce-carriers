@@ -13,8 +13,7 @@ class HCECDeliveryCollectAddressesValidator extends HCCoreFormValidator
     {
         return [
             'delivery_option_id' => 'required',
-'address' => 'required',
-
+            'address' => 'required',
         ];
     }
 }

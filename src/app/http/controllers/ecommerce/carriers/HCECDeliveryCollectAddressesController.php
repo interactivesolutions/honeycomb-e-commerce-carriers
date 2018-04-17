@@ -57,15 +57,26 @@ class HCECDeliveryCollectAddressesController extends HCBaseController
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.delivery_option_id'),
             ],
+            'city'               => [
+                "type"  => "text",
+                "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.city'),
+            ],
             'name'               => [
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.name'),
+            ],
+            'second_name'            => [
+                "type"  => "text",
+                "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.second_name'),
             ],
             'address'            => [
                 "type"  => "text",
                 "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.address'),
             ],
-
+            'comment'               => [
+                "type"  => "text",
+                "label" => trans('HCECommerceCarriers::e_commerce_carriers_collect_addresses.comment'),
+            ],
         ];
     }
 
@@ -202,6 +213,7 @@ class HCECDeliveryCollectAddressesController extends HCBaseController
      * Getting user data on POST call
      *
      * @return mixed
+     * @throws \Exception
      */
     protected function getInputData()
     {
@@ -215,6 +227,9 @@ class HCECDeliveryCollectAddressesController extends HCBaseController
         array_set($data, 'record.delivery_option_id', array_get($_data, 'delivery_option_id'));
         array_set($data, 'record.name', array_get($_data, 'name'));
         array_set($data, 'record.address', array_get($_data, 'address'));
+        array_set($data, 'record.city', array_get($_data, 'city'));
+        array_set($data, 'record.second_name', array_get($_data, 'second_name'));
+        array_set($data, 'record.comment', array_get($_data, 'comment'));
 
         return $data;
     }

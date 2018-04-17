@@ -73,6 +73,10 @@ class HCECDeliveryOptionsForm
                             'field_id'    => 'type',
                             'field_value' => 'delivery',
                         ],
+                        [
+                            'field_id'    => 'type',
+                            'field_value' => 'self collected',
+                        ],
                     ],
                 ],
                 [

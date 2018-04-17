@@ -18,7 +18,7 @@ class HCECDeliveryCollectAddresses extends HCUuidModel
      *
      * @var array
      */
-    protected $fillable = ['id', 'delivery_option_id', 'name', 'address'];
+    protected $fillable = ['id', 'delivery_option_id', 'name', 'second_name', 'city', 'comment', 'address'];
 
     /**
      * Delivery option

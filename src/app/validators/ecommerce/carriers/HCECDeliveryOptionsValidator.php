@@ -15,7 +15,6 @@ class HCECDeliveryOptionsValidator extends HCCoreFormValidator
             'carrier'     => 'required',
             'type'        => 'required',
             'fixed_price' => 'required',
-
         ];
     }
 }
